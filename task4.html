@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        //let sayl = "Saylani";
+
+        //let last = sayl.length - 1;
+
+/*      //console.log(rot_say);
+        let i = sayl.slice(6,7)
+        let n = sayl.slice(5,6)
+        let a1 = sayl.slice(4,5)
+        let l = sayl.slice(3,4)
+        let y = sayl.slice(2,3)
+        let a2 = sayl.slice(1,2)
+        let s = sayl.slice(0,1)
+        document.write(`</br> ${i}Saylan </br> 
+        </br> ${n}${i}Sayla </br> 
+        </br> ${a1}${n}${i}Sayl </br> 
+        </br> ${l}${a1}${n}${i}Say  </br> 
+        </br> ${y}${l}${a1}${n}${i}Sa </br> 
+        </br> ${a2}${y}${l}${a1}${n}${i}S </br> 
+        </br> ${s}${a2}${y}${l}${a1}${n}${i} `) */
+        
+/*         let sa = document.querySelector("h2")
+         setInterval(() => {
+            for (let i = 0; i < sayl.length; i++) {
+                let sayl_last = sayl[last];
+                sayl = sayl.slice(0, -1)
+                sayl = sayl_last + sayl;
+                sa.innerHTML = sayl
+                //document.write(sayl);
+        }}, 1000) */;
+
+
+        const rotate = setInterval(myFunction, 1000);  //loops over the function again and again after an interval of 1000 milisecond or 1 second, so it automatically removes the last element and bring it to front
+
+        const rot_word = 'Saylani';    //declaraing the variable we wanna rotate
+        let anArray = rot_word.split('');  //split a string into an array of substrings, If an empty string ("") is used as the separator, the string is split between each character.
+        let rot_say = document.querySelector("h1");
+
+    function myFunction() {  //declaring a function
+        let letter = anArray.pop();   //Remove the last element of an array
+        let newWord = anArray.unshift(letter);  // Add new item to the beginning of an array, in this it adds the removed letter from pop to beginning of an array and overwrites the array
+        let theWord = anArray.join('');   //Convert the elements of an array into a string
+        //console.log(theWord);
+        //document.write(theWord);
+        rot_say.innerHTML = theWord; // outputs the word in h1 element of html
+}
+
+//myFunction()
+//myFunction()
+//myFunction()
+//myFunction()
+//myFunction()
+
+
+    </script>
+</body>
+</html>

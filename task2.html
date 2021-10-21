@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+<body>
+    <script>
+        let d = new Date(); //creates a new date object with the current date and time with standard
+        let dd = d.getDate(); // returns the day of the month (from 1 to 31) for a date
+        let mm = d.getMonth()+1;  // returns the month (from 0 to 11 as a index so we add +1 to make it 1 to 12) of a Date
+        let yyyy = d.getFullYear(); //returns the year with four digits
+        
+        if (dd <= 9) {           //will add extra 0 in single digit
+            dd = `0${dd}`
+        } else {
+            dd = dd
+        }
+
+        document.write(`${mm}-${dd}-${yyyy} </br>`)
+        document.write(`${mm}/${dd}/${yyyy} </br>`)
+        document.write(`${dd}-${mm}-${yyyy} </br>`)
+        document.write(`${mm}/${dd}/${yyyy}`)
+    </script>
+</body>
+</html>

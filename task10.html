@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body>
+    <h2>From Celsius to Fahrenheit</h2> <input type="number" id="ctff" placeholder="Insert Celsius">
+    <button id="ctf">ans</button> <h1 id="cels"></h1>
+    <h2>From Fahrenheit to Celsius</h2> <input type="number" id="ftcc" placeholder="Insert Fahrenheit">
+    <button id="ftc">ans</button> <h1 id="fahr"></h1> 
+    <script>
+        let output = document.querySelector('#cels')
+        let output1 = document.querySelector('#fahr')
+        let ctf = document.getElementById('ctf')
+        let ftc = document.getElementById('ftc')
+
+        ctf.addEventListener('click', () => {
+            let cel = document.getElementById('ctff').value;
+            let fahrenheit = ((9*cel)/5) + 32
+            output.textContent = fahrenheit
+        })
+
+        ftc.addEventListener('click', () => {
+            let fah = document.getElementById('ftcc').value;
+            let celsius = ((fah-32)*5) / 9
+            output1.textContent = celsius
+        })
+    </script>
+</body>
+</html>

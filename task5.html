@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    Enter the year: <input type="Number" id="year">
+    <button id="chk">check leap year</button>
+    <h2></h2>
+    <script>
+        let btnChk = document.querySelector('#chk')
+        let output = document.querySelector('h2')
+
+        btnChk.addEventListener('click',() =>{
+            let year = document.getElementById("year").value;
+            const leap = new Date(year, 1, 29).getDate() === 29 //(year, month(starts from 0 - 11, so 1 is a february), day, hours, minutes, seconds, milliseconds)
+            if (leap == false) {
+                output.innerHTML = `${year} is NOT a leap Year`
+            } else {
+                output.innerHTML = `${year} is A leap Year`
+            }
+        })
+        
+    </script>
+</body>
+</html>

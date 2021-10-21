@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 14</title>
+</head>
+<body>
+    <h1>Capitalize the First Letter of each word of a given String</h1>
+    <br> <input type="text" id="txt" placeholder="Enter text: "><br><br>
+    <button id="cap">Capitalize</button>
+    <h2></h2>
+    <script>
+        let txt = document.getElementById('txt')
+        let btnCap = document.getElementById('cap')
+        let output = document.querySelector('h2')
+
+        btnCap.addEventListener('click', () => {
+            let str = txt.value;
+            //console.log(str);
+            let strA = str.split(' ') // the gap separates each words not each letters, s[;its into an array
+            //console.log(strA);
+
+            for (let i = 0; i < strA.length; i++) {
+            strA[i] = strA[i].charAt(0).toUpperCase() + strA[i].slice(1);  //The charAt() function returns the character at a given index in a string, //The toUpperCase() function converts all the characters of an input string to uppercase, //This function slices a given string from a specified “start” position until the specified “end” position
+            let strC = strA.join(' ')
+            //console.log(strC);
+            output.innerHTML = strC; }
+            //output.innerHTML = strC; //joins into a string
+        })
+    </script>
+</body>
+</html>

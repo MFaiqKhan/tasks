@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+<body>
+    <h2></h2>
+    <script>
+        const oneDay = 24 * 60 * 60 * 1000; //calculated in milliseconds
+    console.log(oneDay);
+        const crntDay = new Date()
+    console.log(crntDay);
+        const nxt14aug = new Date(2022,7,14)
+    console.log(nxt14aug);
+        const diffDays = Math.round(Math.abs((crntDay - nxt14aug) / oneDay));
+    console.log(diffDays);
+        const h2 = document.querySelector('h2')
+        h2.innerHTML = diffDays + " Days Left until Next 14 August"
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 15</title>
+</head>
+<body>
+    <h3>Convert specified Days into Hours</h3>
+    <input type="Number" id="DtH"> <button id="bth">Convert</button><br><br>
+    <h2 id="h">Coversion: </h2>
+    <h3>Convert specified Days into Minutes</h3>
+    <input type="Number" id="DtM"> <button id="btm">Convert</button><br><br>
+    <h2 id="m">Coversion:  </h2>
+    <script>
+        let DtH = document.getElementById('DtH')
+        let DtM = document.getElementById('DtM')
+        let bth = document.getElementById('bth')
+        let btm = document.getElementById('btm')
+        let h = document.getElementById('h')
+        let m = document.getElementById('m')
+
+        bth.addEventListener('click', () => {
+            DtH = DtH.value
+            h.textContent = Number(DtH * 24)
+        })
+
+        btm.addEventListener('click', () => {
+            DtM = DtM.value
+            total2 = DtM * 24 * 60
+            m.textContent = total2
+        })
+
+    </script>
+</body>
+</html>
