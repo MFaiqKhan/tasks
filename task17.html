@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 17</title>
+</head>
+<body>
+    <h2>Enter the Array in Numbers: </h2><br>
+    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button>
+     <button id="ret">Check and Return</button>
+    <h1></h1>
+    <script>
+        let inpArr = document.getElementById('inp-arr')
+        let RTCbtn = document.getElementById('ret');
+        let Addbtn = document.querySelector('#Add-arr');
+        let output = document.querySelector('h1');
+        let Arr = []
+
+        Addbtn.addEventListener('click', () => {
+        Arr.push(inpArr.value);
+        inpArr.value = "";
+        ArrPush = Arr
+        })
+
+        RTCbtn.addEventListener('click', () => {
+            //let large = ArrPush[0];
+            let large = Math.max.apply(null, ArrPush)
+            for (i = 0; i <= ArrPush.length; i++) {
+                ArrPush[i] = large;
+            }
+            output.textContent = ArrPush
+        /* or (let i = 1; i < ArrPush.length; i++) {
+            if(ArrPush[i] > large ) {
+                ArrPush[i] = ArrPush
+                ArrPush = Arr
+                output.textContent = ArrPush[i]
+            } else {
+                large = ArrPush
+                output.textContent = ArrPush
+            } 
+            } */
+        })    
+
+
+
+
+    </script>
+</body>
+</html>
