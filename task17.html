@@ -25,12 +25,26 @@
         })
 
         RTCbtn.addEventListener('click', () => {
-            //let large = ArrPush[0];
-            let large = Math.max.apply(null, ArrPush)
-            for (i = 0; i <= ArrPush.length; i++) {
-                ArrPush[i] = large;
-            }
-            output.textContent = ArrPush
+            let large = Math.max(...ArrPush);
+            console.log(large);
+            ArrPush[0] = large
+            console.log(large);
+            for (let i = 1; i <= ArrPush.length; i++) {
+                if (large >= ArrPush[i]) {
+                    ArrPush[i] = large
+                } else {
+                    return ArrPush[i]
+                }
+                output.textContent = ArrPush
+               // arrprint = large
+            } 
+
+            /* for(let i = 0; i <=ArrPush.length;i++) {
+                ArrPush[i] = Max;
+            } */
+
+            //output.textContent = ArrPush
+            //output.textContent = arrprint
         /* or (let i = 1; i < ArrPush.length; i++) {
             if(ArrPush[i] > large ) {
                 ArrPush[i] = ArrPush
