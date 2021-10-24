@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 20</title>
+</head>
+<body>
+    <h2>Enter the Array in Numbers: </h2><br>
+    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button> 
+    <button class="origg">Output the Original Array</button>
+    <h1 class="orig"></h1>
+    <h4>Enter the Number to be replaced with</h4>
+    <input type="number" id="repl-arr">
+    <button id="ret">Return the Replaced Array</button>
+    <h1 class="Final"></h1>
+    <script>
+        let inpArr = document.getElementById('inp-arr');
+        let replArr = document.getElementById('repl-arr');
+        let RTCbtn = document.getElementById('ret');
+        let Addbtn = document.querySelector('#Add-arr');
+        let origiBTn = document.querySelector('.origg')
+        let output = document.querySelector(".Final");
+        let origPUT = document.querySelector('.orig')
+        let Arr = [];
+
+        Addbtn.addEventListener('click', () => {
+        Arr.push(inpArr.value);
+        inpArr.value = "";
+        ArrPush = Arr;
+        })
+
+        origiBTn.addEventListener('click', () => {
+            origPUT.innerText = ArrPush;
+        })
+
+        RTCbtn.addEventListener('click', () => {
+            let rePLarr = replArr.value;
+            console.log(rePLarr);
+            let ArrLen = ArrPush.length
+            console.log(ArrLen);
+            const ArrRep = ArrPush.map(x => x = rePLarr)
+            output.textContent = ArrRep;
+            //ArrPush[0] = large
+            //console.log(large);
+           /*  for (let i = 0; i <= ArrPush.length; i++) {
+                ArrPush[i] = rePLarr
+                output.textContent = ArrPush
+               // arrprint = large
+            }  */
+        })
+    </script>
+</body>
+</html>
