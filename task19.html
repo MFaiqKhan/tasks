@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 19</title>
+</head>
+<body>
+    <h2>Enter the Array in Numbers: </h2><br>
+    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button> 
+    <button class="origg">Output the Original Array</button>
+    <h1 class="orig"></h1>
+    <h4>Enter the Kth greatest to find the that Number:  </h4>
+    <input type="number" id="kthNum">
+    <button id="kth">Return the Kth Number</button>
+    <h1 class="Final"></h1>
+    <script>
+        let inpArr = document.getElementById('inp-arr');
+        let KthNum = document.getElementById('kthNum');
+        let RTCbtn = document.getElementById('kth');
+        let Addbtn = document.querySelector('#Add-arr');
+        let origiBTn = document.querySelector('.origg')
+        let output = document.querySelector(".Final");
+        let origPUT = document.querySelector('.orig')
+        let Arr = [];
+
+        Addbtn.addEventListener('click', () => {
+        Arr.push(inpArr.value);
+        inpArr.value = "";
+        ArrPush = Arr;
+        })
+
+        origiBTn.addEventListener('click', () => {
+            origPUT.innerText = ArrPush;
+        })
+
+        RTCbtn.addEventListener('click', () => {
+            let kthnum = KthNum.value;
+            console.log(kthnum);
+            let large = Math.max(...ArrPush);
+            console.log(large);
+            let i = 1
+            while (i <= kthnum) {
+                ArrPush.splice(Arr.indexOf(large), i);
+                //console.log(ArrPush);
+               // Math.max(...ArrPush);
+                i++;
+                return large
+                //console.log(ArrPush);
+            }
+
+            output.textContent = large
+           /*  for (let i = 1; i <= ArrPush.length; i++) {
+                if (large >= ArrPush[i]) {
+                    ArrPush[i] = large
+                } else {
+                    return ArrPush[i]
+                }
+                output.textContent = ArrPush
+               // arrprint = large
+            }  */
+        })
+
+    </script>
+</body>
+</html>
