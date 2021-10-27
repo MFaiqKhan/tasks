@@ -7,8 +7,78 @@
     <title>Task 18</title>
 </head>
 <body>
+    <h2>Enter the Array in Numbers: </h2><br>
+    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button> 
+    <button class="origg">Output the Original Array</button>
+    <h1 class="orig"></h1>
+    <h4>Enter the Kth greatest to find the that Number:  </h4>
+    <input type="number" id="kthNum">
+    <button id="kth">Return the Kth Number</button>
+    <h1 class="Final"></h1>
     <script>
-        
+        let inpArr = document.getElementById('inp-arr');
+        let KthNum = document.getElementById('kthNum');
+        let RTCbtn = document.getElementById('kth');
+        let Addbtn = document.querySelector('#Add-arr');
+        let origiBTn = document.querySelector('.origg')
+        let output = document.querySelector(".Final");
+        let origPUT = document.querySelector('.orig')
+        let Arr = [];
+
+        Addbtn.addEventListener('click', () => {
+        Arr.push(inpArr.value);
+        inpArr.value = "";
+        ArrPush = Arr;
+        })
+
+        origiBTn.addEventListener('click', () => {
+            origPUT.innerText = ArrPush;
+        })
+
+        RTCbtn.addEventListener('click', () => {
+            let kthnum = KthNum.value;                                    
+            console.log(kthnum);
+            //ArrPush.sort((a, b) => b - a);
+            console.log(ArrPush.sort((a, b) => b - a));
+            for (let i = 0; i < kthnum; i++) {
+                let printOut = ArrPush[i] + " ";
+                Math.min(...printOut)
+                output.textContent = printOut 
+            }
+        })
+                   
+
+            //output.textContent = findKthLargest
+            //let large = Math.max(...ArrPush);
+            //console.log(large);
+            //ArrPush.sort ()
+            //console.log(ArrPush.sort());
+            //for (let i = 1;  i <= kthnum ;i++) {
+                //var max = Math.max.apply(null, ArrPush[i]); // get the max of the array
+                //let large = Math.max(...ArrPush);
+                //ArrPush.splice(ArrPush.indexOf(large), 1); // remove max from the array
+                //return Math.max.apply(null, ArrPush)
+                //console.log(Math.max.apply(null, ArrPush));
+                /* let larg = ArrPush.splice(Arr.indexOf(large), i)
+                console.log(ArrPush.splice(Arr.indexOf(large), i))
+                output.textContent = larg */
+                //console.log(ArrPush);
+               // Math.max(...ArrPush);
+                //return large
+                //console.log(ArrPush);
+            //}
+ 
+
+            //output.textContent = large
+           /*  for (let i = 1; i <= ArrPush.length; i++) {
+                if (large >= ArrPush[i]) {
+                    ArrPush[i] = large
+                } else {
+                    return ArrPush[i]
+                }
+                output.textContent = ArrPush
+               // arrprint = large
+            }  */
     </script>
 </body>
 </html>

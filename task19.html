@@ -8,60 +8,68 @@
 </head>
 <body>
     <h2>Enter the Array in Numbers: </h2><br>
-    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button> 
-    <button class="origg">Output the Original Array</button>
+    <input type="number" id="inp-arr"> <button id="Add-arr">Add</button>
+    <button class="origg">Output the Original Array</button> <br>
     <h1 class="orig"></h1>
-    <h4>Enter the Kth greatest to find the that Number:  </h4>
-    <input type="number" id="kthNum">
-    <button id="kth">Return the Kth Number</button>
+    <button id="ret">Check and Return</button>
     <h1 class="Final"></h1>
     <script>
         let inpArr = document.getElementById('inp-arr');
-        let KthNum = document.getElementById('kthNum');
-        let RTCbtn = document.getElementById('kth');
         let Addbtn = document.querySelector('#Add-arr');
         let origiBTn = document.querySelector('.origg')
-        let output = document.querySelector(".Final");
         let origPUT = document.querySelector('.orig')
+        let RTCbtn = document.getElementById('ret');
+        let output = document.querySelector(".Final");
         let Arr = [];
 
-        Addbtn.addEventListener('click', () => {
-        Arr.push(inpArr.value);
-        inpArr.value = "";
-        ArrPush = Arr;
+        Addbtn.addEventListener( 'click' ,() => {
+            Arr.push(inpArr.value);
+            inpArr.value = "";
+            ArrPush = Arr
         })
 
         origiBTn.addEventListener('click', () => {
-            origPUT.innerText = ArrPush;
+            origPUT.textContent = ArrPush;
         })
 
         RTCbtn.addEventListener('click', () => {
-            let kthnum = KthNum.value;
-            console.log(kthnum);
-            let large = Math.max(...ArrPush);
-            console.log(large);
-            let i = 1
-            while (i <= kthnum) {
-                ArrPush.splice(Arr.indexOf(large), i);
-                //console.log(ArrPush);
-               // Math.max(...ArrPush);
-                i++;
-                return large
-                //console.log(ArrPush);
+            var frequency = [];  // array of frequency.
+            var max = 0;  // holds the max frequency.
+            var result;   // holds the max frequency element.
+            for(var v in ArrPush) {
+                frequency[ArrPush[v]]=(frequency[ArrPush[v]] || 0) + 1; // increment frequency.
+                if(frequency[ArrPush[v]] > max) { // is this frequency > max so far ?
+                max = frequency[ArrPush[v]];  // update max.
+                result = ArrPush[v];          // update result.
+                }output.textContent = result
             }
-
-            output.textContent = large
-           /*  for (let i = 1; i <= ArrPush.length; i++) {
-                if (large >= ArrPush[i]) {
-                    ArrPush[i] = large
-                } else {
-                    return ArrPush[i]
-                }
-                output.textContent = ArrPush
-               // arrprint = large
-            }  */
+            
+           /*  const callChk = (Array, value) => {
+                return Array.reduce((acc, elem) => {
+                   return (value === elem ? output.textContent = elem : output.textContent = "no repeated Number Exist")
+                }, 0)
+            }
+            callChk(ArrPush, 2) */
+            /* let count = {};
+            let max = 0;
+            let ans;
+            ArrPush.sort();
+            //ArrPush.forEach((element) => {
+               // console.log(element);
+                for(i=0; i <= ArrPush.length; i++){
+                    if (count[ArrPush[i]] > max) {
+                        max = count[ArrPush[i]];
+                        ans = ArrPush[i]
+                        output.textContent = count
+                        //console.log(element);
+                        //console.log(ArrPush[i]);
+                    } else {
+                        count = 0
+                        output.textContent = "no repeated Number Exist"
+                    }
+                }  */
         })
-
     </script>
 </body>
 </html>
+
