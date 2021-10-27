@@ -7,8 +7,31 @@
     <title>Task 12</title>
 </head>
 <body>
+    <h2>Input the Number to check: </h2>
+    <input type="number">
+    <button class="chk">Check</button>
+    <h1></h1>
     <script>
-        
+        let x = document.querySelector('input');
+        let chk = document.querySelector('.chk');
+        let h1 = document.querySelector('h1');
+
+        chk.addEventListener( 'click' ,() => {
+            let xVal = x.value
+
+            if (Math.abs(100 - xVal) <= 20) {
+                h1.innerText = `${xVal} is within 20 of 100`
+            } else if (Math.abs(400 - xVal) <= 20) {
+                h1.innerText = `${xVal} is within 20 of 400`
+            } else {
+                h1.innerText = `${xVal} is neither in 20 of 100 or 400`
+            }
+/*             let y = Math.abs((100 - xVal) <= 20)?  `${xVal} is within 20 of 100`: 
+            (Math.abs((400 - xVal) <= 20))? `${xVal} is within 20 of 400`:
+            `${xVal} is neither in 20 of 100 or 400`  */
+
+            /* h1.innerText = y */
+        })
     </script>
 </body>
 </html>
