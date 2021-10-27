@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Week Class 5</title>
+</head>
+<body>
+    <h2>Current Day and Time</h2>
+    <script>
+        var today = new Date()
+//console.log(today);
+var todays_day = today.getDay()
+//console.log(todays_day);
+const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+let day = weekdays[todays_day];
+//console.log(day);
+document.write(`Today is : ${day}.`); 
+document.write("</br>")
+
+let crntHrs = today.getHours()
+let crntMints = today.getMinutes()
+let crntSecs = today.getSeconds()
+let ampm = (crntHrs >= 12)? "PM" : "AM"
+
+if(crntHrs >= 12) {
+  crntHrs = crntHrs - 12
+} else {
+  crntHrs = crntHrs
+}
+
+if(crntMints <= 9){
+  crntMints = `0${crntMints}`
+} else {
+  crntMints = crntMints
+}
+
+//let AM_PM = (crntHrs >= 12)? "AM": "PM"
+/* function AM_PM(_date){
+var ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+ minutes : minutes;
+  return ampm
+} */
+
+document.write("</br>")
+document.write(`Current Time is : ${crntHrs} ${ampm} : ${crntMints} : ${crntSecs}`);
+
+    </script>
+</body>
+</html>

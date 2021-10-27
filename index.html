@@ -4,50 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Week Class 5</title>
+    <title>Class 5_ All assignments</title>
 </head>
 <body>
-    <h2>Current Day and Time</h2>
-    <script>
-        var today = new Date()
-//console.log(today);
-var todays_day = today.getDay()
-//console.log(todays_day);
-const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-let day = weekdays[todays_day];
-//console.log(day);
-document.write(`Today is : ${day}.`); 
-document.write("</br>")
-
-let crntHrs = today.getHours()
-let crntMints = today.getMinutes()
-let crntSecs = today.getSeconds()
-let ampm = (crntHrs >= 12)? "PM" : "AM"
-
-if(crntHrs >= 12) {
-  crntHrs = crntHrs - 12
-} else {
-  crntHrs = crntHrs
-}
-
-if(crntMints <= 9){
-  crntMints = `0${crntMints}`
-} else {
-  crntMints = crntMints
-}
-
-//let AM_PM = (crntHrs >= 12)? "AM": "PM"
-/* function AM_PM(_date){
-var ampm = hours >= 12 ? 'pm' : 'am';
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-  minutes = minutes < 10 ? '0'+ minutes : minutes;
-  return ampm
-} */
-
-document.write("</br>")
-document.write(`Current Time is : ${crntHrs} ${ampm} : ${crntMints} : ${crntSecs}`);
-
-    </script>
+    <a href="/Tasks(5thclass)/task01.html">Task 1: JavaScript program to display the current day and time</a>
+    <a href="/Tasks(5thclass)/task02.html">Task 2: JavaScript program to get the current date in all 4 formats </a>
+    <a href="Tasks(5thclass)/task03.html">Task 3: JavaScript program to find the area of a triangle where lengths of the 
+        three of its sides are 5, 6, 7</a>
+    <a href="Tasks(5thclass)/task04.html">Task 4: JavaScript program to rotate the string 'Saylani'</a>
+    <a href="Tasks(5thclass)/task05.html">Task 5: JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.</a>
+    <a href="Tasks(5thclass)/task06.html">Task 6: JavaScript program to find 1st January is being a Sunday between 2014 and 2050</a>
+    <a href="Tasks(5thclass)/task07.html">Task 7: JavaScript program where the program takes a random Number between 1 to 10.</a>
+    <a href="Tasks(5thclass)/task08.html">Task 8: JavaScript program to calculate days left until next 14 August.</a>
+    <a href="Tasks(5thclass)/task09.html">Task 9: JavaScript program to calculate multiplication and division of two numbers.</a>
+    <a href="Tasks(5thclass)/task10.html">Task 10: JavaScript program to convert temperatures to and from Celsius, Fahrenheit</a>
+    <a href="Tasks(5thclass)/task11.html">Task 11: JavaScript program to compute the sum of the two given Numbers. 
+        If the two values are same, then returns triple their sum.</a>
+    <a href="Tasks(5thclass)/task12.html">Task 12: JavaScript program to check whether a given Number is within 20 of 100 or 400.</a>
+    <a href="Tasks(5thclass)/task13.html">Task 13: JavaScript program to find the largest of three given Numbers.</a>
+    <a href="Tasks(5thclass)/task14.html">Task 14: JavaScript program to capitalize the first letter of each word of a given string.</a>
+    <a href="Tasks(5thclass)/task15.html">Task 15: JavaScript program to convert a given days to hours and minutes.</a>
+    <a href="Tasks(5thclass)/task16.html">Task 16: JavaScript program to reverse the elements of a given array, you can not use Array.reverse() do it with loop</a>
+    <a href="Tasks(5thclass)/task17.html">Task 17: JavaScript program to find the larger value between the first or last
+        and set all the other elements with that value. Display the new array.</a>
+    <a href="Tasks(5thclass)/task18.html">Task 18: JavaScript program to find the kth greatest element of a given array of Numbers</a>
+    <a href="Tasks(5thclass)/task19.html">Task 19: JavaScript program to find the number which appears most in a given array of Numbers.
+    </a>
+    <a href="Tasks(5thclass)/task20.html">Task 20: JavaScript program to replace all the numbers with a specified number of a given array of Numbers.</a>
 </body>
 </html>
